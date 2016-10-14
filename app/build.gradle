@@ -5,7 +5,7 @@ android {
     buildToolsVersion "24.0.3"
     defaultConfig {
         applicationId "tck.cn.mysimplenewsclient"
-        minSdkVersion 20
+        minSdkVersion 21
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
@@ -53,7 +53,6 @@ dependencies {
     compile 'com.google.dagger:dagger:2.7'
     apt 'com.google.dagger:dagger-compiler:2.7'
     compile 'com.android.support:design:24.2.1'
-
     //network
     compile 'com.google.code.gson:gson:2.4'
     compile 'com.squareup.retrofit2:retrofit:2.0.2'
@@ -63,15 +62,16 @@ dependencies {
     compile 'com.squareup.okhttp3:logging-interceptor:3.0.1'
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.github.bumptech.glide:okhttp3-integration:1.4.0@aar'
-
     //rx
     compile 'io.reactivex:rxjava:1.1.0'
     compile 'io.reactivex:rxandroid:1.1.0'
     compile 'com.jakewharton.rxbinding:rxbinding:0.4.0'
-
     //widget
     compile 'com.victor:lib:1.0.4'
     compile 'com.prolificinteractive:material-calendarview:1.4.0'
     compile 'net.opacapp:multiline-collapsingtoolbar:1.2.2'
     compile 'com.miguelcatalan:materialsearchview:1.4.0'
+    compile 'com.android.support:recyclerview-v7:24.2.1'
+    compile 'io.realm:realm-android:+'
+    compile 'com.android.support:cardview-v7:24.2.1'
 }

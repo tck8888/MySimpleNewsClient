@@ -32,6 +32,8 @@
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme">
         </activity>
+        <activity android:name=".ui.zhihu.ZhihuDetailActivity">
+        </activity>
     </application>
 
 </manifest>

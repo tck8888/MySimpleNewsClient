@@ -17,6 +17,8 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 import rx.Observable;
+import tck.cn.mysimplenewsclient.model.bean.DailyBeforeListBean;
+import tck.cn.mysimplenewsclient.model.bean.DailyListBean;
 import tck.cn.mysimplenewsclient.model.bean.SplashBean;
 
 /**
@@ -58,5 +60,13 @@ public class RetrofitHelper {
 
     public Observable<SplashBean> fetchSplashInfo(String res) {
         return zhihuApiService.getSplashInfo(res);
+    }
+
+    public Observable<DailyListBean> fetchDailyListInfo() {
+        return zhihuApiService.getDailyList();
+    }
+
+    public Observable<DailyBeforeListBean> fetchDailyBeforeListInfo(String date) {
+        return zhihuApiService.getDailyBeforeList(date);
     }
 }

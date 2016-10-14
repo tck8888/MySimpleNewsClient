@@ -78,17 +78,4 @@ public abstract class BaseActivity<T extends BasePresenter> extends SupportActiv
     protected ActivityModule getActivityModule(){
         return new ActivityModule(this);
     }
-
-    protected void setToolBar(Toolbar toolbar, String title) {
-        toolbar.setTitle(title);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBackPressedSupport();
-            }
-        });
-    }
 }

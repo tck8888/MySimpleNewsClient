@@ -1,5 +1,7 @@
 package tck.cn.mysimplenewsclient.model.http;
 
+import tck.cn.mysimplenewsclient.model.bean.DailyBeforeListBean;
+import tck.cn.mysimplenewsclient.model.bean.DailyListBean;
 import tck.cn.mysimplenewsclient.model.bean.SplashBean;
 
 import retrofit2.http.GET;
@@ -21,4 +23,16 @@ public interface ZhihuApis {
      */
     @GET("start-image/{res}")
     Observable<SplashBean> getSplashInfo(@Path("res") String res);
+
+    /**
+     * 最新日报
+     */
+    @GET("news/latest")
+    Observable<DailyListBean> getDailyList();
+
+    /**
+     * 往期日报
+     */
+    @GET("news/before/{date}")
+    Observable<DailyBeforeListBean> getDailyBeforeList(@Path("date") String date);
 }

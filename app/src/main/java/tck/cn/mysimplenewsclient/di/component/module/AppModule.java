@@ -6,6 +6,7 @@ import dagger.Module;
 import dagger.Provides;
 import tck.cn.mysimplenewsclient.app.App;
 import tck.cn.mysimplenewsclient.di.component.ContextLife;
+import tck.cn.mysimplenewsclient.model.db.RealmHelper;
 import tck.cn.mysimplenewsclient.model.http.RetrofitHelper;
 
 /**
@@ -33,5 +34,11 @@ public class AppModule {
     @Singleton
     RetrofitHelper provideRetrofitHelper() {
         return new RetrofitHelper();
+    }
+
+    @Provides
+    @Singleton
+    RealmHelper provideRealmHelper() {
+        return new RealmHelper(application);
     }
 }
